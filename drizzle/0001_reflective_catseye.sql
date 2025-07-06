@@ -1,0 +1,1 @@
+CREATE UNIQUE INDEX `tokens_table_address_contractAddress_unique` ON `tokens_table` (`address`,`contractAddress`);

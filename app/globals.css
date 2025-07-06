@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: #040404;
+    --foreground: #ffffff;
+    --card: #1f2937;
+    --card-foreground: #ffffff;
+    --popover: #1f2937;
+    --popover-foreground: #ffffff;
+    --primary: #bff009;
+    --primary-foreground: #040404;
+    --secondary: #374151;
+    --secondary-foreground: #ffffff;
+    --muted: #374151;
+    --muted-foreground: #9ca3af;
+    --accent: #374151;
+    --accent-foreground: #ffffff;
+    --destructive: #ef4444;
+    --destructive-foreground: #ffffff;
+    --border: #374151;
+    --input: #374151;
+    --ring: #bff009;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: #040404;
+    --foreground: #ffffff;
+    --card: #1f2937;
+    --card-foreground: #ffffff;
+    --popover: #1f2937;
+    --popover-foreground: #ffffff;
+    --primary: #bff009;
+    --primary-foreground: #040404;
+    --secondary: #374151;
+    --secondary-foreground: #ffffff;
+    --muted: #374151;
+    --muted-foreground: #9ca3af;
+    --accent: #374151;
+    --accent-foreground: #ffffff;
+    --destructive: #ef4444;
+    --destructive-foreground: #ffffff;
+    --border: #374151;
+    --input: #374151;
+    --ring: #bff009;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    background-color: #040404;
+    color: #ffffff;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #374151;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #bff009;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a8d908;
+}
+
+/* Glow effects for primary color */
+.glow-primary {
+  box-shadow: 0 0 20px rgba(191, 240, 9, 0.3);
+}
+
+/* Animation for countdown timer */
+@keyframes pulse-glow {
+  0%,
+  100% {
+    box-shadow: 0 0 5px rgba(191, 240, 9, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(191, 240, 9, 0.8);
+  }
+}
+
+.pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
